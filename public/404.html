@@ -1,27 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Priyanka S Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priyanka-S-Portfolio</title>
+    <meta name="description" content="Hi, I'm PRIYANKA S An Electrical & Electronics Engineer passionate about MATLAB, Simulink, and Circuit designs. I turn real ideas into working models and simulate smarter solutions with purpose and precision." />
+    <meta name="author" content="Priyanka S" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Priyanka-S-Portfolio" />
+    <meta property="og:description" content="Hi, I'm PRIYANKA S An Electrical & Electronics Engineer passionate about MATLAB, Simulink, and Circuit designs. I turn real ideas into working models and simulate smarter solutions with purpose and precision." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Priyanka-S-Portfolio" />
+    <meta name="twitter:description" content="Hi, I'm PRIYANKA S An Electrical & Electronics Engineer passionate about MATLAB, Simulink, and Circuit designs. I turn real ideas into working models and simulate smarter solutions with purpose and precision." />
+  </head>
+
+  <body>
+    <div id="root">
+      <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: 'Inter', sans-serif; text-align: center;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Hi, I'm PRIYANKA S</h1>
+        <p style="font-size: 1.25rem; max-width: 600px;">
+          An Electrical & Electronics Engineer passionate about MATLAB, Simulink, and Circuit designs.<br/><br/>
+          I turn real ideas into working models and simulate smarter solutions with purpose and precision.
+        </p>
+      </main>
+    </div>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
-      // This script takes the current url and converts the path and query
-      // string into just a query string, and then redirects the browser
-      // to the new url with only a query string and hash fragment.
-      var pathSegmentsToKeep = 1;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
     </script>
-  </head>
-  <body>
   </body>
 </html> 
